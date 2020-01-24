@@ -9,7 +9,7 @@ export default [
     id: 200,
     name: "Amoxicillin",
     strength: "15mg",
-    qty: 40
+    qty: 60
   },
   {
     id: 300,

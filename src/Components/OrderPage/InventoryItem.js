@@ -4,14 +4,17 @@ import { FaPlusCircle } from "react-icons/fa";
 
 export default function InventoryItem(item) {
   console.log(item);
-  const { id, name, strength, qty } = item;
+  const { id, name, strength, qty, internalid, addItem } = item;
   return (
     <InventoryItemWrapper>
-      <p>{id}</p>
+      {/* <p>{internalid}</p> */}
       <p className="item-title">{name}</p>
       <p>{strength}</p>
       <p>{qty}</p>
-      <FaPlusCircle />
+      <FaPlusCircle
+        onClick={() => addItem(item.internalid)}
+        style={{ cursor: "pointer" }}
+      />
     </InventoryItemWrapper>
   );
 }

@@ -8,7 +8,7 @@ export default function Inventory() {
   return (
     <PharmaConsumer>
       {value => {
-        const { items, inventory } = value;
+        const { items, inventory, handleAddItem } = value;
         return (
           <>
             {inventory.map(item => {
@@ -18,6 +18,8 @@ export default function Inventory() {
                   name={item.name}
                   strength={item.strength}
                   qty={item.qty}
+                  internalid={item.id}
+                  addItem={handleAddItem}
                 />
               );
             })}
